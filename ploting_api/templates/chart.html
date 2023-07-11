@@ -1,0 +1,31 @@
+<!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<div id="chart-container"></div>
+
+<script>
+    fetch('http://127.0.0.1:8000/chart')
+        .then(response => response.json())
+        .then(data => {
+        // Render the graph using Plotly.js
+        Plotly.newPlot('chart-container', data);
+    });
+</script> -->
+
+{% if graph %}
+{{ graph|safe }}
+{% else %}
+<p>No graph was provided.</p>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% autoescape off %}
+    {{result}}
+{% endautoescape %} -->
